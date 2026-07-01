@@ -82,7 +82,7 @@ export default function Sidebar() {
               className={`relative flex items-center w-full p-3.5 rounded-xl transition-all duration-200 outline-none text-left ${
                 isActive 
                   ? "text-white" 
-                  : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                  : "text-slate-300 hover:text-slate-100 hover:bg-white/5"
               }`}
             >
               {/* Active Indicator Background */}
@@ -133,7 +133,7 @@ export default function Sidebar() {
         {/* Toggle Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center justify-center w-full p-3 rounded-xl text-slate-400 hover:text-slate-200 hover:bg-white/5 transition-all outline-none"
+          className="flex items-center justify-center w-full p-3 rounded-xl text-slate-300 hover:text-slate-100 hover:bg-white/5 transition-all outline-none"
         >
           {isExpanded ? (
             <div className="flex items-center w-full gap-4">

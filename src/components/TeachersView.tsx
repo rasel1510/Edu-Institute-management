@@ -135,7 +135,7 @@ export default function TeachersView() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Teacher Profiles</h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-0.5">
+          <p className="text-slate-200 text-xs md:text-sm mt-0.5">
             View details, teaching rosters, schedules, and departments of Neuravixor faculty.
           </p>
         </div>
@@ -150,13 +150,13 @@ export default function TeachersView() {
 
       {/* Search Toolbar */}
       <div className="relative max-w-md">
-        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+        <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-300" />
         <input
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           type="text"
           placeholder="Search teachers by name, subject, department..."
-          className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950/60 focus:bg-slate-950 focus:border-brand-blue outline-none text-sm text-slate-100 placeholder-slate-500 transition"
+          className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950/60 focus:bg-slate-950 focus:border-brand-blue outline-none text-sm text-slate-100 placeholder-slate-450 transition"
         />
       </div>
 
@@ -182,13 +182,13 @@ export default function TeachersView() {
               <h3 className="font-bold text-white text-base truncate max-w-full">{tch.name}</h3>
               <p className="text-brand-cyan text-xs font-semibold mt-1">{tch.subject} Instructor</p>
               
-              <p className="text-slate-400 text-xs mt-3 line-clamp-2 italic px-2">
+              <p className="text-slate-200 text-xs mt-3 line-clamp-2 italic px-2">
                 &ldquo;{tch.bio}&rdquo;
               </p>
             </div>
 
             {/* Quick specifications */}
-            <div className="px-5 py-3.5 bg-slate-950/40 border-t border-slate-900/60 flex items-center justify-between text-xs text-slate-400">
+            <div className="px-5 py-3.5 bg-slate-950/40 border-t border-slate-900/60 flex items-center justify-between text-xs text-slate-300">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5 text-brand-purple" />
                 {tch.schedule.length} Classes/wk
@@ -196,13 +196,13 @@ export default function TeachersView() {
               <div className="space-x-1.5 shrink-0">
                 <button
                   onClick={(e) => openEditModal(e, tch)}
-                  className="p-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-slate-800 text-slate-400 hover:text-white transition"
+                  className="p-1.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-slate-800 text-slate-200 hover:text-white transition"
                 >
                   <Edit2 className="w-3.5 h-3.5" />
                 </button>
                 <button
                   onClick={(e) => handleDelete(e, tch.id)}
-                  className="p-1.5 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20 text-slate-400 hover:text-red-400 transition"
+                  className="p-1.5 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20 text-slate-200 hover:text-red-400 transition"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                 </button>

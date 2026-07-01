@@ -110,7 +110,7 @@ export default function StudentsView() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Student Directory</h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-0.5">
+          <p className="text-slate-200 text-xs md:text-sm mt-0.5">
             Manage student registrations, academic grades, and enrollment status.
           </p>
         </div>
@@ -127,23 +127,23 @@ export default function StudentsView() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-3.5 items-center">
         {/* Search */}
         <div className="relative md:col-span-5">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-300" />
           <input
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             type="text"
             placeholder="Search by name, ID, or email..."
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950/60 focus:bg-slate-950 focus:border-brand-blue outline-none text-sm text-slate-100 placeholder-slate-500 transition"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-800 bg-slate-950/60 focus:bg-slate-950 focus:border-brand-blue outline-none text-sm text-slate-100 placeholder-slate-400 transition"
           />
         </div>
 
         {/* Grade Filter */}
         <div className="relative md:col-span-3 flex items-center gap-2 bg-slate-950/60 border border-slate-800 px-3.5 py-2.5 rounded-xl">
-          <Filter className="w-4 h-4 text-slate-500 shrink-0" />
+          <Filter className="w-4 h-4 text-slate-300 shrink-0" />
           <select
             value={gradeFilter}
             onChange={(e) => setGradeFilter(e.target.value)}
-            className="bg-transparent border-none outline-none text-slate-300 text-xs w-full cursor-pointer focus:text-white"
+            className="bg-transparent border-none outline-none text-slate-200 text-xs w-full cursor-pointer focus:text-white"
           >
             <option className="bg-slate-950 text-slate-300" value="All">All Grades</option>
             <option className="bg-slate-950 text-slate-300" value="10th Grade">10th Grade</option>
@@ -154,11 +154,11 @@ export default function StudentsView() {
 
         {/* Status Filter */}
         <div className="relative md:col-span-3 flex items-center gap-2 bg-slate-950/60 border border-slate-800 px-3.5 py-2.5 rounded-xl">
-          <SlidersHorizontal className="w-4 h-4 text-slate-500 shrink-0" />
+          <SlidersHorizontal className="w-4 h-4 text-slate-300 shrink-0" />
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="bg-transparent border-none outline-none text-slate-300 text-xs w-full cursor-pointer focus:text-white"
+            className="bg-transparent border-none outline-none text-slate-200 text-xs w-full cursor-pointer focus:text-white"
           >
             <option className="bg-slate-950 text-slate-300" value="All">All Statuses</option>
             <option className="bg-slate-950 text-slate-300" value="Active">Active</option>
@@ -187,7 +187,7 @@ export default function StudentsView() {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left">
             <thead>
-              <tr className="border-b border-slate-800/60 bg-slate-950/50 text-[10px] uppercase font-bold tracking-wider text-slate-400">
+              <tr className="border-b border-slate-800/60 bg-slate-950/50 text-[10px] uppercase font-bold tracking-wider text-slate-200">
                 <th className="p-4 pl-6">Student info</th>
                 <th className="p-4">Student ID</th>
                 <th className="p-4">Academic Level</th>
@@ -216,7 +216,7 @@ export default function StudentsView() {
                         />
                         <div>
                           <p className="font-semibold text-white">{stu.name}</p>
-                          <p className="text-xs text-slate-400">{stu.email}</p>
+                          <p className="text-xs text-slate-300">{stu.email}</p>
                         </div>
                       </div>
                     </td>
@@ -255,13 +255,13 @@ export default function StudentsView() {
                     <td className="p-4 pr-6 text-right space-x-1">
                       <button
                         onClick={() => openEditModal(stu)}
-                        className="p-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-slate-800 text-slate-400 hover:text-white transition"
+                        className="p-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-slate-800 text-slate-200 hover:text-white transition"
                       >
                         <Edit2 className="w-3.5 h-3.5" />
                       </button>
                       <button
                         onClick={() => handleDelete(stu.id)}
-                        className="p-2 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20 text-slate-400 hover:text-red-400 transition"
+                        className="p-2 rounded-lg hover:bg-red-500/10 border border-transparent hover:border-red-500/20 text-slate-200 hover:text-red-400 transition"
                       >
                         <Trash2 className="w-3.5 h-3.5" />
                       </button>

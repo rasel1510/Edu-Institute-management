@@ -87,7 +87,7 @@ export default function ClassesView() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white">Classes & Rooms</h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-0.5">
+          <p className="text-slate-200 text-xs md:text-sm mt-0.5">
             Manage course lists, classroom locations, scheduling, and assigned teachers.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function ClassesView() {
                     </div>
                     <div>
                       <h3 className="font-bold text-white text-base leading-tight">{cls.name}</h3>
-                      <p className="text-xs text-slate-400 mt-0.5">{teacherName}</p>
+                      <p className="text-xs text-slate-200 mt-0.5">{teacherName}</p>
                     </div>
                   </div>
                   <span className="font-mono text-[10px] text-slate-500 bg-slate-900 border border-slate-850 px-2 py-0.5 rounded">
@@ -147,7 +147,7 @@ export default function ClassesView() {
                 {/* Enrollment Progress Indicator */}
                 <div className="space-y-1.5 mt-3">
                   <div className="flex justify-between text-[10px] font-semibold">
-                    <span className="text-slate-400">Roster Capacity</span>
+                    <span className="text-slate-300">Roster Capacity</span>
                     <span className={occupancyRate >= 95 ? "text-red-400" : "text-brand-cyan"}>
                       {occupancyRate}%
                     </span>

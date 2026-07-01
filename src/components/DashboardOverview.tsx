@@ -132,7 +132,7 @@ export default function DashboardOverview() {
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
             Dashboard
           </h1>
-          <p className="text-slate-400 text-xs md:text-sm mt-0.5">
+          <p className="text-slate-200 text-xs md:text-sm mt-0.5">
             Real-time analytics and institute overview.
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function DashboardOverview() {
         >
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Students</p>
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Total Students</p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 font-mono">
                 {totalStudents.toLocaleString()}
               </h3>
@@ -178,7 +178,7 @@ export default function DashboardOverview() {
         >
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Teachers</p>
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Total Teachers</p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 font-mono">
                 {totalTeachers}
               </h3>
@@ -202,7 +202,7 @@ export default function DashboardOverview() {
         >
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Classes</p>
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Total Classes</p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 font-mono">
                 {totalClasses}
               </h3>
@@ -211,7 +211,7 @@ export default function DashboardOverview() {
               <BookOpen className="w-5 h-5" />
             </div>
           </div>
-          <div className="mt-4 flex items-center gap-1.5 text-xs text-slate-400">
+          <div className="mt-4 flex items-center gap-1.5 text-xs text-slate-300">
             <span>Occupancy Rate: <b>90%</b></span>
           </div>
         </motion.div>
@@ -225,7 +225,7 @@ export default function DashboardOverview() {
         >
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Today's Attendance</p>
+              <p className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Today's Attendance</p>
               <h3 className="text-2xl md:text-3xl font-bold text-white mt-2 font-mono">
                 {attendanceStats.present}%
               </h3>
@@ -293,7 +293,7 @@ export default function DashboardOverview() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-white truncate">{stu.name}</p>
-                    <p className="text-xs text-slate-400 truncate">{stu.grade} • {stu.id}</p>
+                    <p className="text-xs text-slate-300 truncate">{stu.grade} • {stu.id}</p>
                   </div>
                   <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-900 border border-slate-800 text-brand-cyan group-hover:bg-brand-blue/10 group-hover:border-brand-blue/30 transition">
                     Active
@@ -341,7 +341,7 @@ export default function DashboardOverview() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold text-white truncate">{tch.name}</p>
-                    <p className="text-xs text-slate-400 truncate">{tch.subject} Instructor</p>
+                    <p className="text-xs text-slate-300 truncate">{tch.subject} Instructor</p>
                   </div>
                   <span className="text-[10px] px-2 py-0.5 rounded-full bg-brand-purple/10 border border-brand-purple/20 text-brand-purple">
                     Faculty
@@ -395,7 +395,7 @@ export default function DashboardOverview() {
                 {/* Mid Label */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
                   <span className="text-2xl font-bold text-white font-mono">{attendanceStats.present}%</span>
-                  <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">Present</span>
+                  <span className="text-[10px] text-slate-300 font-semibold uppercase tracking-wider">Present</span>
                 </div>
               </div>
 
@@ -411,7 +411,7 @@ export default function DashboardOverview() {
                       }} 
                     />
                     <div>
-                      <p className="text-xs font-semibold text-slate-400">{p.name}</p>
+                      <p className="text-xs font-semibold text-slate-300">{p.name}</p>
                       <p className="text-sm font-bold text-white font-mono">{p.value}%</p>
                     </div>
                   </div>
@@ -437,8 +437,8 @@ export default function DashboardOverview() {
           onClick={() => setActiveTab("fees")}
         >
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Fee Management</p>
-            <p className="text-[11px] text-slate-500 mt-1">Total Collected</p>
+            <p className="text-[10px] font-bold text-slate-300 uppercase tracking-wider">Fee Management</p>
+            <p className="text-[11px] text-slate-450 mt-1">Total Collected</p>
             <h4 className="text-xl font-bold text-white font-mono mt-1">
               ${totalCollectedFees.toLocaleString()}
             </h4>
@@ -467,8 +467,8 @@ export default function DashboardOverview() {
           onClick={() => setActiveTab("classes")}
         >
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Classes</p>
-            <p className="text-[11px] text-slate-500 mt-1">Total Classes</p>
+            <p className="text-[10px] font-bold text-slate-300 uppercase tracking-wider">Classes</p>
+            <p className="text-[11px] text-slate-450 mt-1">Total Classes</p>
             <h4 className="text-xl font-bold text-white font-mono mt-1">
               {totalClasses}
             </h4>
@@ -497,8 +497,8 @@ export default function DashboardOverview() {
           onClick={() => setActiveTab("exams")}
         >
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Exams</p>
-            <p className="text-[11px] text-slate-500 mt-1">Upcoming Exams</p>
+            <p className="text-[10px] font-bold text-slate-300 uppercase tracking-wider">Exams</p>
+            <p className="text-[11px] text-slate-450 mt-1">Upcoming Exams</p>
             <h4 className="text-xl font-bold text-white font-mono mt-1">
               {exams.length}
             </h4>
@@ -527,8 +527,8 @@ export default function DashboardOverview() {
           onClick={() => setActiveTab("reports")}
         >
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Academic Reports</p>
-            <p className="text-[11px] text-slate-500 mt-1">Reports Generated</p>
+            <p className="text-[10px] font-bold text-slate-300 uppercase tracking-wider">Academic Reports</p>
+            <p className="text-[11px] text-slate-450 mt-1">Reports Generated</p>
             <h4 className="text-xl font-bold text-white font-mono mt-1">
               32
             </h4>
